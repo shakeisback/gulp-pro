@@ -26,45 +26,56 @@ import Easydropdown from 'easydropdown';
  * Посередник (Mediator)
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('my-select').onchange = e => {
-    mediator.post('input-change', e);
-  };
+// document.addEventListener('DOMContentLoaded', () => {
+//   document.getElementById('my-select').onchange = e => {
+//     mediator.post('input-change', e);
+//   };
 
-  //
-  //
-  // -- hosting
-  // const inc = getIncrementor(10);
-  // console.log(inc());
-  // console.log(inc());
-  // console.log(inc());
-  // const inc2 = getIncrementor(20);
-  // console.log(inc2());
-  // console.log(inc2());
-  // console.log(inc2());
-  //
-  //
-  // -- decorator
-  // const mb = new MacBook();
-  // Memory(mb);
-  // Engraving(mb);
-  // Insurance(mb);
-  // console.log(mb.cost()); //1522
-  // console.log(mb.screenSize()); //13.3
-  //
-  //
-  // -- observer
-  // document.addEventListener('keyup', e => {
-  //   observer.notify(e.keyCode);
-  // });
-  //
-  //
-  // -- select
-  // const dropDown = Easydropdown('#my-select', {
-  //   callbacks: {
-  //     onSelect: value => {
-  //       mediator.post('dropdown-input', value);
-  //     },
-  //   },
-  // });
-});
+//
+//
+// -- hosting
+// const inc = getIncrementor(10);
+// console.log(inc());
+// console.log(inc());
+// console.log(inc());
+// const inc2 = getIncrementor(20);
+// console.log(inc2());
+// console.log(inc2());
+// console.log(inc2());
+//
+//
+// -- decorator
+// const mb = new MacBook();
+// Memory(mb);
+// Engraving(mb);
+// Insurance(mb);
+// console.log(mb.cost()); //1522
+// console.log(mb.screenSize()); //13.3
+//
+//
+// -- observer
+// document.addEventListener('keyup', e => {
+//   observer.notify(e.keyCode);
+// });
+//
+//
+// -- select
+// const dropDown = Easydropdown('#my-select', {
+//   callbacks: {
+//     onSelect: value => {
+//       mediator.post('dropdown-input', value);
+//        },
+//      },
+//    });
+// });
+// home work
+function Adder() {
+    let res = 0;
+    return function(x) {
+        return res += x;
+    };
+}
+var summ = Adder();
+console.log(summ(5));
+console.log(summ(10));
+console.log(summ(20));
